@@ -10112,3 +10112,43 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.heading {
+  vertical-align: top;
+  height: auto !important;
+  width: auto;
+  /*background-color: cyan;
+  border-radius: 10px;*/
+}
+
+.description {
+  display:none;
+  font-weight: normal;
+}
+
+.show {
+  display: none;
+    text-decoration: underline;
+}
+
+.hide:target + .show {
+  display: inline;
+  text-decoration: underline;
+}
+
+.hide:target {
+  display: none;
+  text-decoration: underline;
+}
+
+.hide:target ~ .description {
+  display:inline;
+  text-decoration: none;
+
+}
+
+@media print {
+  .hide, .show {
+    display: none;
+  }
+}
