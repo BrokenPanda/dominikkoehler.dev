@@ -4945,14 +4945,16 @@ a.badge-dark:focus, a.badge-dark.focus {
     background-position: 0 0;
   }
 }
+
 .progress {
   display: flex;
-  height: 1rem;
+  height: 1.85rem;
   overflow: hidden;
-  line-height: 0;
-  font-size: 0.75rem;
+  line-height: 0px;
+  font-size: 0.9rem;
   background-color: #e9ecef;
   border-radius: 0.25rem;
+  position: relative;
 }
 
 .progress-bar {
@@ -4960,11 +4962,13 @@ a.badge-dark:focus, a.badge-dark.focus {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  line-height: 0px;
   color: #fff;
   text-align: center;
   white-space: nowrap;
   background-color: #326496;
   transition: width 0.6s ease;
+  border-radius: 0.25rem;
 }
 @media (prefers-reduced-motion: reduce) {
   .progress-bar {
@@ -4986,6 +4990,36 @@ a.badge-dark:focus, a.badge-dark.focus {
     -webkit-animation: none;
             animation: none;
   }
+}
+
+.progress > .progress-type {
+  position: absolute;
+  left: 0px;
+  min-width: 9.5rem;
+  font-weight: 800;
+  padding: 7.5px 25px 7.5px 10px;
+  background-color: rgba(10, 10, 10, 0.1);
+  color: rgb(255, 255, 255);
+}
+.stacked-label {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+.progress > .progress-completed {
+  position: absolute;
+  right: 1em;
+  font-weight: 100;
+  padding: 15px 0px 0px;
+}
+
+.progress-bar.active {
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+.progress-status {
+  color: white;
+  text-align: left;
+  margin-left: 10rem;
 }
 
 .media {
