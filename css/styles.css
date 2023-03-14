@@ -120,6 +120,10 @@ ul ol {
   margin-bottom: 0;
 }
 
+li {
+  font-size:20px;
+}
+
 dt {
   font-weight: 700;
 }
